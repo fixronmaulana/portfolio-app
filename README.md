@@ -4,21 +4,6 @@
     </a>
 </p>
 
-<p align="center">
-    <a href="https://github.com/fikronmaulana/portfolio-app/actions">
-        <img src="https://github.com/fikronmaulana/portfolio-app/workflows/tests/badge.svg" alt="Build Status">
-    </a>
-    <a href="https://packagist.org/packages/fikronmaulana/portfolio-app">
-        <img src="https://img.shields.io/packagist/dt/fikronmaulana/portfolio-app" alt="Total Downloads">
-    </a>
-    <a href="https://packagist.org/packages/fikronmaulana/portfolio-app">
-        <img src="https://img.shields.io/packagist/v/fikronmaulana/portfolio-app" alt="Latest Stable Version">
-    </a>
-    <a href="https://opensource.org/licenses/MIT">
-        <img src="https://img.shields.io/packagist/l/fikronmaulana/portfolio-app" alt="License">
-    </a>
-</p>
-
 ## 🎨 Portfolio App – Fikron Maulana
 
 **Portfolio App** adalah aplikasi web berbasis Laravel yang dikembangkan untuk menampilkan portofolio pribadi milik **Fikron Maulana**. Aplikasi ini menampilkan informasi proyek, pengalaman, dan kemampuan secara profesional dan terstruktur.
