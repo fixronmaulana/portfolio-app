@@ -1,38 +1,40 @@
 @extends('layouts.admin.base')
 @section('content')
- <section class="services" id="services">
-            <div class="titlebar">
-                <h1>Services</h1>
-                <button class="open-modal">New Service</button>
+    <section class="services" id="services">
+        <div class="titlebar">
+            <h1>Services</h1>
+            <button class="open-modal">New Service</button>
+        </div>
+        @include('admin.services.create')
+        @include('includes.flash_message')
+        <div class="table">
+            <div class="table-filter">
+                <div>
+                    <ul class="table-filter-list">
+                        <li>
+                            <p class="table-filter-link link-active">All</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="table">
-                <div class="table-filter">
-                    <div>
-                        <ul class="table-filter-list">
-                            <li>
-                                <p class="table-filter-link link-active">All</p>
-                            </li>
-                        </ul>
-                    </div>
+            <div class="table-search">
+                <div>
+                    <select class="search-select" name="" id="">
+                        <option value="">Filter Service</option>
+                    </select>
                 </div>
-                <div class="table-search">
-                    <div>
-                        <select class="search-select" name="" id="">
-                            <option value="">Filter Service</option>
-                        </select>
-                    </div>
-                    <div class="relative">
-                        <input class="search-input" type="text" name="search" placeholder="Search Service...">
-                    </div>
+                <div class="relative">
+                    <input class="search-input" type="text" name="search" placeholder="Search Service...">
                 </div>
-                <div class="service_table-heading">
-                    <p>Title</p>
-                    <p>Icon</p>
-                    <p>Description</p>
-                    <p>Actions</p>
-                </div>
-                <!-- item 1 -->
-                @foreach ($services as $service)
+            </div>
+            <div class="service_table-heading">
+                <p>Title</p>
+                <p>Icon</p>
+                <p>Description</p>
+                <p>Actions</p>
+            </div>
+            <!-- item 1 -->
+            @foreach ($services as $service)
                 <div class="service_table-items">
                     <p>{{ $service->name }}</p>
                     <button class="service_table-icon">
@@ -48,43 +50,14 @@
                         </button>
                     </div>
                 </div>
-                @endforeach
+            @endforeach
 
-            </div>
+        </div>
 
-            <!-------------- SERVICES MODAL --------------->
-            <div class="modal ">
-                <div class="modal-content">
-                    <h2>Create Service</h2>
-                    <span class="close-modal">×</span>
-                    <hr>
-                    <div>
-                        <label>Service Name</label>
-                        <input type="text" />
+        <!-------------- SERVICES MODAL --------------->
 
-                        <label>Icon Class <span style="color:#006fbb;">(Find your suitable icon: Font
-                                Awesome)</span></label>
 
-                        <input type="text" />
-
-                        <label>Description</label>
-                        <textarea cols="10" rows="5"></textarea>
-                    </div>
-                    <hr>
-                    <div class="modal-footer">
-                        <button class="close-modal">
-                            Cancel
-                        </button>
-                        <button class="secondary close-modal">
-                            <span><i class="fa fa-spinner fa-spin"></i></span>
-                            Save
-                        </button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="main-modal " :class="showModal ? 'show' : ''">
+        {{-- <div class="main-modal " :class="showModal ? 'show' : ''">
                 <div class="modal">
                     <h2>
                         <span v-if="editMode">Edit </span>
@@ -115,5 +88,6 @@
                         </button>
                     </div>
                 </div>
-            </div>
-        </section>@endsection
+            </div> --}}
+    </section>
+@endsection

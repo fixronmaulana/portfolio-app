@@ -4,7 +4,7 @@
         {{ $formMode === 'edit' ? 'Update Changes' : '' }}
     </button>
 </div>
-@include('include.flash_message')
+@include('includes.flash_message')
 <div class="card-wrapper">
     <div class="wrapper_left">
         <div class="card">
