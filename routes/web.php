@@ -21,7 +21,7 @@ Route::get('/admin/medias', [MediaController::class, 'index'])->name('medias.ind
 Route::post('/admin/medias', [MediaController::class, 'store'])->name('medias.store');
 Route::delete('/admin/medias/{media}', [MediaController::class, 'destroy'])->name('medias.destroy');
 // Services routes
-Route::get('/admin/services', [ServiceController::class, 'index'])->name('admin.service.index');
+Route::get('/admin/services', [ServiceController::class, 'index'])->name('admin.services.index');
 
 Route::get('/{any}', function () {
     return view('notFoundPage');

@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Database\Seeder;
 use Database\Seeders\AboutSeeder;
 use Database\Seeders\MediaSeeder;
+use Database\Seeders\ServiceSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,7 +17,11 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-        $this->call([AboutSeeder::class],[MediaSeeder::class]);
+        $this->call(
+            [AboutSeeder::class],
+            [MediaSeeder::class],
+            [ServiceSeeder::class],
+        );
 
         /*User::factory()->create([
             'name' => 'Test User',
